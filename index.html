@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Foldline · Pocket booklet press</title>
+<link rel="icon" href="assets/frog.png"><link rel="stylesheet" href="style.css">
+<script defer src="vendor/pdf-lib.min.js"></script><script defer src="js/booklet.js"></script><script defer src="js/app.js"></script>
+</head>
+<body>
+<header><div class="brand"><img src="assets/frog.png" alt=""> Foldline</div><a href="#source">Page tray ↓</a></header>
+<main><section class="intro"><div><h1>Booklet press<span>.</span></h1><p>Turn a stack of page images into a pocket-sized zine.</p></div><button id="example">Try an example ↗</button></section>
+<div class="workspace"><section class="bench" aria-label="Folding preview">
+<div class="bar"><strong>Fold table</strong><span id="edition"></span></div>
+<div class="mat"><div id="paper" class="paper"><div class="half" id="left"></div><div class="half" id="right"></div></div></div>
+<div class="benchfoot"><span id="pair" aria-live="polite"></span><button id="fold" class="primary">Fold sheet →</button></div></section>
+<aside><h2>Press controls</h2><div class="setting"><label>Sheet</label><div class="step"><button id="prev" aria-label="Previous sheet">−</button><b id="count"></b><button id="next" aria-label="Next sheet">+</button></div></div>
+<div class="setting"><label>Side on table</label><div class="switch"><button id="front">Front</button><button id="back">Back</button></div></div>
+<div class="setting"><label for="size">Paper size</label><select id="size"><option value="A4">A4 · 297 × 210 mm</option><option value="Letter">US Letter · 11 × 8.5 in</option></select></div>
+<div class="output"><p id="summary"></p><button id="export" class="gold">Download PDF ↓</button><small>Print double-sided. Flip on short edge. Nest sheets in order, then fold.</small></div></aside></div>
+<section id="source"><div class="trayhead"><div><h2>Page tray</h2><p id="traynote"></p></div><button id="upload">Add my pages +</button><input hidden type="file" id="files" accept="image/png,image/jpeg" multiple></div><p id="status" role="status"></p><ol id="tray"></ol></section>
+</main></body></html>
